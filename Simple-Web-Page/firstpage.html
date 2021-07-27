@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="angular.js"></script>
+    <style>   
+    .dropbtn {
+        background-color: blue;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+      
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: yellow;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      
+      
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+        
+        body {background-image: linear-gradient(to right, orange , black);}
+
+        @media screen and (min-width: 800px) { /*The following CSS runs only for displays with a width (in pixels) of more than 800px*/
+    body {
+        background-color: orange;
+    }
+}
+
+@media screen and (max-width: 800px) { /*The following CSS runs only for displays with a width (in pixels) of less than 800px*/
+    body {
+        background-color:orange;
+    }
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+i{
+    font-size: 30px;
+}
+
+p{
+    font-size: 50px;
+}
+
+.bottomright {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+
+.topleft {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
+}
+        
+        
+        </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV TERUEL</title>
+</head>
+
+<body>    
+
+    <div class="topleft"  ng-app="ang" ng-controller="cnt"> 
+        <h2>{{time}}</h2>
+        </div>
+        <script>
+        var app = angular.module('ang', []);
+        app.controller('cnt', function($scope, $interval) {
+          $scope.time = new Date().toLocaleTimeString();
+          $interval(function () {
+              $scope.time = new Date().toLocaleTimeString();
+          }, 1000);
+        });
+        </script>    
+
+
+    <div align="center"><p><img src="1.jpeg" style="max-height: 912px; "></p></div>
+    <div align="left"><h1><b><i>WELCOME</i></b></h1> </div>
+    <i><u>Want to Look Something ? Do Not Hesitate:</u></i>
+
+
+
+<div class="dropdown">
+    <button class="dropbtn">CHECK OUT</button>
+    <div class="dropdown-content">
+    <a href="firstpage.html" target="_self">Look Our Site</a>
+    <a href="team.html" target="_self">Team</a>
+    <a href="history.html" target="_self">Hıstory</a>
+    <a href="shop.html" target="_self">Shop</a>
+    </div>
+  </div>
+  <div align="left"><h1><b><i>OUR MAIN SPONSOR</i></b></h1> </div>
+  <a target="_self" href="http://forestalia.com/en/">
+    <img border="0" alt="W3Schools" src="sponsor.jpg" width="200" height="100">
+
+<div class="bottomright"><p><img src="logo.png" width="300px" height="300px"></p></div>
+
+</body>
+</html>

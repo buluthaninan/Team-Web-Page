@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="angular.js"></script>
+    <style>      
+        
+        body {background-image: linear-gradient(to bottom right, orange , black);}
+
+        @media screen and (min-width: 800px) { /*The following CSS runs only for displays with a width (in pixels) of more than 800px*/
+    body {
+        background-color: orange;
+    }
+}
+
+@media screen and (max-width: 800px) { /*The following CSS runs only for displays with a width (in pixels) of less than 800px*/
+    body {
+        background-color:orange;
+    }
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+h2{
+    position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 25px;   
+    
+}
+h1{
+    color: rgb(25, 0, 255);
+}
+
+p{
+    color: white;
+}
+
+.topleft {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
+}
+
+.renk{
+    color: white;
+}
+
+button {
+    margin:0 auto;
+    display:block;
+}
+
+
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+</head>
+<body>
+    <div align="center" ><h1><b><i>STORE</i></b></h1> </div>
+
+    <button onclick="sum()">BUY</button>
+    <h1 align="center" id="answer"></h1>
+
+
+    <div class="topleft" ><a target="_self" href="firstpage.html" >TURN TO HOME PAGE</a></div>
+
+
+
+
+
+    <div align="left"><p><img src="shirt.jpg" width="300px" height="300px"></p></div>
+    <div class="renk">Quantity: <input type="number" id="q1" name="qqqqq" min="1"></div>
+    
+
+
+
+
+
+
+    
+        
+    <div align="right"><p><img src="suit.jpg" width="300px" height="300px"></p></div>
+    <div class="renk" style="float: right; clear: right;">Quantity: <input type="number" id="q2" name="q" min="1"></div>
+
+
+
+
+    
+
+    <div align="left"><p><img src="jersey.jpg" width="300px" height="300px"></p></div>
+    <div class="renk">Quantity: <input type="number" id="q3" name="qq" min="1"></div>
+    
+
+
+        
+        
+
+    
+
+    <div align="right" ><p><img src="backpack.jpg" width="300px" height="300px"></p></div>
+    <div class="renk" style="float: right; clear: right;">Quantity: <input type="number" id="q4" name="qqqq" min="1"></div>
+
+
+
+    
+
+    
+
+    <script>
+function sum(){
+        var field1=document.getElementById("q1").value;
+        var field2=document.getElementById("q2").value;
+        var field3=document.getElementById("q3").value;
+        var field4=document.getElementById("q4").value;
+        var shirt=30;
+        var jersey=100;
+        var backpack=60;
+        var suit=45;
+
+        var result1= field1*shirt;
+        var result2= field2*suit;
+        var result3= field3*jersey;
+        var result4= field4*backpack;
+
+        var res=result1+result2+result3+result4;
+
+        document.getElementById("answer").innerHTML="TOTAL PRICE: "+res+"€";
+
+    }
+
+   
+
+    </script>
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
