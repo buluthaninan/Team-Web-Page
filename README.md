@@ -1,5 +1,6 @@
 # Team-WebPage
-Simple Web Page For Volleyball Team
+Simple Web Page For Volleyball Team<br>
+This web page is for University Web Lecture.
 
 Technologies Used:<br>
 HTML<br>
